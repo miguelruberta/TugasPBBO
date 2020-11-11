@@ -1,5 +1,4 @@
-package Vendor.entity;
-
+package com.example.pbbo.Model.Vendor;
 
 /**
  * @author Kevin Hartono

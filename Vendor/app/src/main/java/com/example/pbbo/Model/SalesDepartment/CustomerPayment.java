@@ -1,6 +1,6 @@
-package entity;
+package com.example.pbbo.Model.SalesDepartment;
 
-import Customer.entity.Customer;
+import com.example.pbbo.Model.Customer.*;
 
 /**
  * @author Kevin Hartono

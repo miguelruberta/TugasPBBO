@@ -1,5 +1,7 @@
-package entity;
+package com.example.pbbo.Model.SalesDepartment;
 
+
+import java.util.Date;
 
 /**
  * @author Kevin Hartono

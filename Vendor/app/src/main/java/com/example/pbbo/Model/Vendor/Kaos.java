@@ -1,6 +1,6 @@
-package Vendor.entity;
+package com.example.pbbo.Model.Vendor;
 
-
+import Vendor.entity.SizeKaos;
 /**
  * @author Kevin Hartono
  * @version 1.0

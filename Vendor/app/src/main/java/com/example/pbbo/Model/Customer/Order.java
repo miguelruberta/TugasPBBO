@@ -1,4 +1,9 @@
-package Customer.entity;
+package com.example.pbbo.Model.Customer;
+
+import java.util.Date;
+
+import Vendor.entity.Kaos;
+import Vendor.entity.Sablon;
 
 
 /**

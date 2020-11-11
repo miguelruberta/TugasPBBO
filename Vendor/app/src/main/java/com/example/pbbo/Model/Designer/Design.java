@@ -1,4 +1,6 @@
-package Designer.entity;
+package com.example.pbbo.Model.Designer;
+
+import Designer.entity.Designer;
 
 
 /**

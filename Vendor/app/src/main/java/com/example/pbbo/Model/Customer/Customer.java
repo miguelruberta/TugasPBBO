@@ -1,4 +1,4 @@
-package Customer.entity;
+package com.example.pbbo.Model.Customer;
 
 
 /**

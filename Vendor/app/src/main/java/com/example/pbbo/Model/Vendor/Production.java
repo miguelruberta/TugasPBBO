@@ -1,6 +1,8 @@
-package Vendor.entity;
+package com.example.pbbo.Model.Vendor;
 
-import Designer.entity.Design;
+import com.example.pbbo.Model.Designer.*;
+
+import java.util.Date;
 
 /**
  * @author Kevin Hartono
