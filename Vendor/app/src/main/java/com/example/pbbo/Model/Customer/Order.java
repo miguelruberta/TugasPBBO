@@ -2,10 +2,9 @@ package com.example.pbbo.Model.Customer;
 
 import java.util.Date;
 
-import Vendor.entity.Kaos;
-import Vendor.entity.Sablon;
+import com.example.pbbo.Model.Vendor.Kaos;
+import com.example.pbbo.Model.Vendor.Sablon;
 
-import
 /**
  * @author Kevin Hartono
  * @version 1.0
