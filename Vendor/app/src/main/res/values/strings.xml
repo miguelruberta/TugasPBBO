@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">PBBO</string>
+    <string name="app_home">BROLON</string>
+    <string name="text_home">"Brolon adalah perusahaan sablon yang
+lagi laris manis. Brolon menyediakan jasa sablon yang terbaik dan pastinya
+TIDAK MENGECEWAKAN pelanggan, ini beberapa view kami ya:)"</string>
+    <string name="app_name"></string>
+    <string name="best_desain">BEST DESAIN</string>
 </resources>

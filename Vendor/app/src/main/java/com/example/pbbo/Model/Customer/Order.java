@@ -1,5 +1,10 @@
 package com.example.pbbo.Model.Customer;
 
+import com.example.pbbo.Model.Vendor.Kaos;
+import com.example.pbbo.Model.Vendor.Sablon;
+
+import java.util.Date;
+
 /**
  * @author Kevin Hartono
  * @version 1.0

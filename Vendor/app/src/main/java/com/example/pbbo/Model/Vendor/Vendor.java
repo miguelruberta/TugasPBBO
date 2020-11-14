@@ -6,6 +6,7 @@ package com.example.pbbo.Model.Vendor;
  * @version 1.0
  * @created 26-Oct-2020 07:38:13
  */
+
 public class Vendor {
 
 	private String alamat;
