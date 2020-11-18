@@ -27,7 +27,7 @@ public class BerandaActivity extends AppCompatActivity {
             customer = getIntent().getParcelableExtra("customer");
         }
 
-        System.out.println(customer.getNama());
+        //System.out.println(customer.getNama());
 
         btnBeranda.setOnClickListener(new View.OnClickListener() {
             @Override

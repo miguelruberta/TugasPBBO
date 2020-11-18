@@ -107,6 +107,38 @@ public class DBHelper extends SQLiteOpenHelper {
         }
     }
 
+    public boolean checkUser (String email){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM user WHERE TRIM(email) = '"+email.trim()+"'", null);
+
+        //System.out.println(cursor.getCount());
+        if (cursor.moveToFirst()) {
+            if(cursor.getCount() > 0){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int getUserId (String email){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT id FROM user WHERE TRIM(email) = '"+email.trim()+"'", null);
+        int userId = 0;
+
+        //System.out.println(cursor.getCount());
+        if (cursor.moveToFirst()) {
+            do {
+                userId = Integer.parseInt(cursor.getString(cursor.getColumnIndex("id")));
+            } while (cursor.moveToNext());
+//            if(cursor.getCount() > 0){
+//                int userId = Integer.parseInt(cursor.toString());
+//                return userId;
+//            }
+        }
+//        System.out.println("id " + userId);
+        return userId;
+    }
+
     public Cursor getData (){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM user", null);

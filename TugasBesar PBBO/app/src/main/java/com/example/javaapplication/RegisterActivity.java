@@ -35,7 +35,7 @@ public class RegisterActivity extends AppCompatActivity {
         db = new DBHelper(this);
 
 
-        register.setOnClickListener(new View.OnClickListener(){
+        register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Boolean isEmpty = false;
@@ -63,17 +63,23 @@ public class RegisterActivity extends AppCompatActivity {
                     isEmpty = true;
                 }
 
-                if(isEmpty == false){
-                    boolean cekInsert = db.insertUser(name, pass, email, noHP);
-                    if(cekInsert == true) {
-                        //int id = db.;
-                        //belum diberi perintah pencarian user (cek apakah user dengan email yang sama sudah terdaftar)
-                        //pencarian id belum
-                        Toast.makeText(RegisterActivity.this, "Insert data berhasil", Toast.LENGTH_SHORT).show();
-                        goToBeranda(1, email, name, noHP, pass);
+                if (isEmpty == false) {
+                    boolean checkAva = db.checkUser(email);
+                    if (checkAva == true) {     //check jika email sudah terdaftar atau belum
+                        Toast.makeText(RegisterActivity.this, "Email Telah Terdaftar", Toast.LENGTH_SHORT).show();
                     } else {
-                        Toast.makeText(RegisterActivity.this, "Gagal Insert data", Toast.LENGTH_SHORT).show();
-                        goToHome();
+                        boolean cekInsert = db.insertUser(name, pass, email, noHP);
+                        //System.out.println(cekInsert);
+                        if (cekInsert == true) {
+                            int id = db.getUserId(email);
+                            System.out.println("id = " + id);
+                            Toast.makeText(RegisterActivity.this, "Insert data berhasil", Toast.LENGTH_SHORT).show();
+                            goToBeranda(id, email, name, noHP, pass);
+                            //pencarian id belum
+                        } else {
+                            Toast.makeText(RegisterActivity.this, "Gagal Insert data", Toast.LENGTH_SHORT).show();
+                            goToHome();
+                        }
                     }
                 } else {
                     Toast.makeText(RegisterActivity.this, "Terdapat data kosong", Toast.LENGTH_SHORT).show();
