@@ -8,6 +8,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -31,6 +32,35 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS user");
     }
 
+    public boolean Authenticate(String name, String password) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM user WHERE name = ?", new String[]{name});
+
+//        Log.d("ADebugTag X", "Value: " + (x));
+//        Cursor cursor2 = db.rawQuery("user",
+//                new String[]{"password"},
+//                "password" + "=?",
+//                new String[]{password}, null, null, null);
+
+        if (cursor.getCount() > 0) {
+            String y = md5(password);
+            cursor.moveToFirst();
+            Log.d("ADebugTag X", "Value: " + (cursor.getString(2)));
+//            Log.d("ADebugTag X", "Value: " + (x));
+//            Log.d("ADebugTag Y", "Value: " + (y));
+            if (y.equalsIgnoreCase(cursor.getString(2))) {
+                cursor.close();
+                return true;
+            } else {
+                cursor.close();
+                return false;
+            }
+        } else {
+            cursor.close();
+            return false;
+
+        }
+    }
     public static final String md5(final String p){
         final String md5 = "md5";
         try{

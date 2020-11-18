@@ -2,17 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
-<<<<<<< HEAD
-    <mapping directory="$PROJECT_DIR$/SEMESTER 3/AI/Tubes/CollegeAdventure" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/SEMESTER 3/AI/Tubes/CollegeAdventure/collegeadventure" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/SEMESTER 3/AI/Tubes/temp/CollegeAdventure" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/SEMESTER 3/AI/Tubes/temp/CollegeAdventure/collegeadventure" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/SEMESTER 4/Prak PBP/dengerinAja/dengerinaja-fe" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/SEMESTER 4/Prak PBP/sia/sia-fe" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/SEMESTER 4/Praktikum Piranti Bergerak ( Android )/Tugas Besar (Final)/viaggioppb" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/SEMESTER 4/Praktikum Piranti Bergerak ( Android )/Tugas Besar/Test/viaggioppb" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/SP" vcs="Git" />
-=======
->>>>>>> 35e2a613935ccd3b160b1d8b73eae53c14b33801
   </component>
 </project>
