@@ -15,17 +15,18 @@
         android:layout_marginTop="270dp"
         android:layout_marginLeft="55dp"
         android:gravity="center"
-        android:text="LOGIN"
+        android:text="@string/login"
         android:textSize="50sp">
     </Button>
 
     <Button
+        android:id="@+id/btn_register"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="55dp"
         android:gravity="center"
-        android:text="REGISTER"
+        android:text="@string/register"
         android:textSize="50sp">
     </Button>
 </LinearLayout>
