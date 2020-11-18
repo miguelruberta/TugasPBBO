@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JavaApplication">
         <activity android:name=".OrderActivity"></activity>
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".BerandaActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

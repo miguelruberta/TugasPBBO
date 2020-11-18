@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#313131"
-    tools:context=".HomeActivity">
+    tools:context=".BerandaActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -30,6 +30,23 @@
         tools:layout_editor_absoluteX="40dp"
         tools:layout_editor_absoluteY="120dp"
         tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="40dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="169dp">
+
+        <fragment
+            android:id="@id/fragment_invoice"
+            android:name="com.example.javaapplication.InvoiceCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -72,19 +89,6 @@
             android:background="#00FFFFFF"
             app:srcCompat="@drawable/profile_black" />
     </LinearLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="300dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="170dp"
-            android:orientation="vertical" />
-    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
