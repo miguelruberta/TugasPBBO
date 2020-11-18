@@ -10,17 +10,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.example.javaapplication.Model.Customer;
+
 public class OrderActivity extends AppCompatActivity {
 
-    private ImageButton btnBeranda = (ImageButton) findViewById(R.id.homeButton);
-    private ImageButton btnHistory = (ImageButton) findViewById(R.id.historyButton);
-    private ImageButton btnOrder = (ImageButton) findViewById(R.id.orderButton);
-    private ImageButton btnProfile = (ImageButton) findViewById(R.id.profileButton);
+    private Customer customer = new Customer();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
+
+        ImageButton btnBeranda = (ImageButton) findViewById(R.id.homeButton);
+        ImageButton btnHistory = (ImageButton) findViewById(R.id.historyButton);
+        ImageButton btnOrder = (ImageButton) findViewById(R.id.orderButton);
+        ImageButton btnProfile = (ImageButton) findViewById(R.id.profileButton);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -29,17 +33,21 @@ public class OrderActivity extends AppCompatActivity {
         fragmentTransaction.add(R.id.fragment_invoice, fragment);
         fragmentTransaction.commit();
 
+        if(getIntent().getExtras() != null) {
+            customer = getIntent().getParcelableExtra("customer");
+        }
+
         btnBeranda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToBeranda();
+                goToBeranda(customer);
             }
         });
 
         btnOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToOrder();
+                goToOrder(customer);
             }
         });
     }
@@ -54,23 +62,27 @@ public class OrderActivity extends AppCompatActivity {
         transaction.commit();
     }
 
-    public void goToBeranda(){
+    public void goToBeranda(Customer customer){
         Intent intent = new Intent(this, BerandaActivity.class);
+        intent.putExtra("customer", customer);
         startActivity(intent);
     }
 
-    public void goToOrder(){
+    public void goToOrder(Customer customer){
         Intent intent = new Intent(this, OrderActivity.class);
+        intent.putExtra("customer", customer);
         startActivity(intent);
     }
 
-//    public void goToHistory(){
-//        Intent intent = new Intent(this, OrderActivity.class);
+//    public void goToHistory(Customer customer){
+//        Intent intent = new Intent(this, HistoryActivity.class);
+//        intent.putExtra("customer", customer);
 //        startActivity(intent);
 //    }
 
-//    public void goToProfil(){
-//        Intent intent = new Intent(this, Pr.class);
+//    public void goToProfil(Customer customer){
+//        Intent intent = new Intent(this, ProfileActivity.class);
+//        intent.putExtra("customer", customer);
 //        startActivity(intent);
 //    }
 
