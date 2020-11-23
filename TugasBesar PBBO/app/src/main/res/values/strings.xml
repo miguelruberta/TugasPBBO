@@ -9,7 +9,9 @@
     <string name="name">NAME</string>
     <string name="nohp">NO HP</string>
     <string name="password">PASSWORD</string>
+    <string name="hintNama">Budi Doremi</string>
     <string name="hintEmail">example@gmail.com</string>
+    <string name="hintNohp">085213188863</string>
     <string name="hintPassword">Type your password</string>
     <string name="est">est 2020</string>
 </resources>
