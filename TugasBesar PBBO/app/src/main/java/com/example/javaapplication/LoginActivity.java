@@ -48,9 +48,14 @@ public class LoginActivity extends AppCompatActivity {
                 boolean cekLogin = db.Authenticate(email, password);
                 Log.d("ADebugTag", "Value: " + (cekLogin));
                 if (cekLogin == true) {
+<<<<<<< HEAD
                     Toast.makeText(LoginActivity.this, "Selamat datang " + email + "!", Toast.LENGTH_SHORT).show();
                     Customer cust = db.getUserObject(email);
                     goToBeranda(cust);
+=======
+                    Toast.makeText(LoginActivity.this, "Selamat datang " + "!", Toast.LENGTH_SHORT).show();
+                    goToHome();
+>>>>>>> b1fc3f79de38e8202516f1db788075cb9c5f2f31
                 } else {
                     Toast.makeText(LoginActivity.this, "Login Gagal", Toast.LENGTH_SHORT).show();
                 }
