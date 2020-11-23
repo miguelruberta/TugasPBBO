@@ -32,9 +32,9 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS user");
     }
 
-    public boolean Authenticate(String name, String password) {
+    public boolean Authenticate(String email, String password) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM user WHERE name = ?", new String[]{name});
+        Cursor cursor = db.rawQuery("SELECT * FROM user WHERE email = ?", new String[]{email});
 
 //        Log.d("ADebugTag X", "Value: " + (x));
 //        Cursor cursor2 = db.rawQuery("user",

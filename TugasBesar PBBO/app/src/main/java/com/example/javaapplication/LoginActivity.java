@@ -17,9 +17,9 @@ public class LoginActivity extends AppCompatActivity {
     private Button login;
     private EditText txtWarning;
     private EditText txtWarning2;
-//    private EditText txtEmail;
+    private EditText txtEmail;
     private EditText txtPassword;
-    private EditText txtName;
+//    private EditText txtName;
     private DBHelper db;
 
     @Override
@@ -29,25 +29,25 @@ public class LoginActivity extends AppCompatActivity {
 
         db = new DBHelper(this);
         txtWarning = (EditText) findViewById(R.id.input_password);
-        txtWarning2 = (EditText) findViewById(R.id.input_nama);
-//        txtEmail = (EditText) findViewById(R.id.input_email);
+        txtWarning2 = (EditText) findViewById(R.id.input_email);
+        txtEmail = (EditText) findViewById(R.id.input_email);
         txtPassword = (EditText) findViewById(R.id.input_password);
-        txtName = (EditText) findViewById(R.id.input_nama);
+//        txtName = (EditText) findViewById(R.id.input_nama);
         login = (Button) findViewById(R.id.btn_login);
 
         login.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                String name = txtName.getText().toString();
-//                String email = txtEmail.getText().toString();
+//                String name = txtName.getText().toString();
+                String email = txtEmail.getText().toString();
                 String password = txtPassword.getText().toString();
 
                 validasi(txtWarning,txtWarning2);
-                boolean cekLogin = db.Authenticate(name, password);
+                boolean cekLogin = db.Authenticate(email, password);
                 Log.d("ADebugTag", "Value: " + (cekLogin));
                 if (cekLogin == true) {
-                    Toast.makeText(LoginActivity.this, "Selamat datang " + name + "!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Selamat datang " + "!", Toast.LENGTH_SHORT).show();
                     goToHome();
                 } else {
                     Toast.makeText(LoginActivity.this, "Login Gagal", Toast.LENGTH_SHORT).show();
