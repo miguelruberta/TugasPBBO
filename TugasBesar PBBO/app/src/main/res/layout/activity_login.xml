@@ -18,11 +18,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="200sp"
             android:layout_marginLeft="10sp"
-            android:text="@string/name"
+            android:text="Email :"
             android:textSize="20sp"/>
 
         <EditText
-            android:id="@+id/input_nama"
+            android:id="@+id/input_email"
             android:layout_marginLeft="10sp"
             android:layout_width="250sp"
             android:layout_height="wrap_content"/>
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10sp"
             android:layout_marginTop="10sp"
-            android:text="@string/password"
+            android:text="Password : "
             android:textSize="20sp"/>
 
         <EditText

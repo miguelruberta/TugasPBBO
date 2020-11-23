@@ -51,7 +51,7 @@ public class BerandaActivity extends AppCompatActivity {
     }
 
     public void goToOrder(Customer customer){
-        Intent intent = new Intent(this, OrderActivity.class);
+        Intent intent = new Intent(this, CreateOrderActivity.class);
         intent.putExtra("customer", customer);
         startActivity(intent);
     }

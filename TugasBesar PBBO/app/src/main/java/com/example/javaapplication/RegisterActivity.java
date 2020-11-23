@@ -49,18 +49,22 @@ public class RegisterActivity extends AppCompatActivity {
 
                 if (name.isEmpty()) {
                     isEmpty = true;
+                    txtName.setError("Field wajib diisi!");
                 }
 
                 if (email.isEmpty()) {
                     isEmpty = true;
+                    txtEmail.setError("Field wajib diisi!");
                 }
 
                 if (noHP.isEmpty()) {
                     isEmpty = true;
+                    txtNohp.setError("Field wajib diisi!");
                 }
 
                 if (pass.isEmpty()) {
                     isEmpty = true;
+                    txtPass.setError("Field wajib diisi!");
                 }
 
                 if (isEmpty == false) {
@@ -75,7 +79,6 @@ public class RegisterActivity extends AppCompatActivity {
                             System.out.println("id = " + id);
                             Toast.makeText(RegisterActivity.this, "Insert data berhasil", Toast.LENGTH_SHORT).show();
                             goToBeranda(id, email, name, noHP, pass);
-                            //pencarian id belum
                         } else {
                             Toast.makeText(RegisterActivity.this, "Gagal Insert data", Toast.LENGTH_SHORT).show();
                             goToHome();
