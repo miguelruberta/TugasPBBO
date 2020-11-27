@@ -48,17 +48,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
-            android:layout_marginTop="200sp"
-            android:layout_marginLeft="10sp"
-            android:text="Email :"
-            android:textSize="20sp"/>
-=======
             android:layout_marginTop="30dp"
             android:layout_marginLeft="10dp"
             android:text="@string/email"
             android:textSize="35sp"/>
->>>>>>> b1fc3f79de38e8202516f1db788075cb9c5f2f31
+
 
         <EditText
             android:id="@+id/input_email"
@@ -70,17 +64,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
-            android:layout_marginLeft="10sp"
-            android:layout_marginTop="10sp"
-            android:text="Password : "
-            android:textSize="20sp"/>
-=======
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
             android:text="@string/password"
             android:textSize="35sp"/>
->>>>>>> b1fc3f79de38e8202516f1db788075cb9c5f2f31
 
         <EditText
             android:id="@+id/input_password"

@@ -9,7 +9,6 @@
     <string name="name">NAME</string>
     <string name="nohp">NO HP</string>
     <string name="password">PASSWORD</string>
-<<<<<<< HEAD
 
     <string-array name="jenis_kain">
         <item>Cotton Combed 30s Premium</item>
@@ -33,11 +32,10 @@
         <item>Discharge</item>
         <item>Rubber</item>
     </string-array>
-=======
+
     <string name="hintNama">Budi Doremi</string>
     <string name="hintEmail">example@gmail.com</string>
     <string name="hintNohp">085213188863</string>
     <string name="hintPassword">Type your password</string>
     <string name="est">est 2020</string>
->>>>>>> b1fc3f79de38e8202516f1db788075cb9c5f2f31
 </resources>
