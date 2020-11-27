@@ -107,7 +107,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:background="#00FFFFFF"
-            app:srcCompat="@drawable/order_list_white" />
+            app:srcCompat="@drawable/order_list_black"/>
 
         <ImageButton
             android:id="@+id/historyButton"
@@ -116,7 +116,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:background="#00FFFFFF"
-            app:srcCompat="@drawable/history_black" />
+            app:srcCompat="@drawable/history_black"/>
 
         <ImageButton
             android:id="@+id/profileButton"
@@ -125,6 +125,6 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:background="#00FFFFFF"
-            app:srcCompat="@drawable/profile_black" />
+            app:srcCompat="@drawable/profile_white"/>
     </LinearLayout>
 </RelativeLayout>
