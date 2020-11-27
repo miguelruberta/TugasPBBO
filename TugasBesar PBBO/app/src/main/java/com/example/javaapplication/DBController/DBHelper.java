@@ -5,12 +5,12 @@ import android.content.Context;
 import android.database.Cursor;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
+
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import androidx.annotation.Nullable;
+import com.example.javaapplication.Model.Customer;
 
 public class DBHelper extends SQLiteOpenHelper {
 
@@ -61,6 +61,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
         }
     }
+
     public static final String md5(final String p){
         final String md5 = "md5";
         try{
@@ -150,22 +151,41 @@ public class DBHelper extends SQLiteOpenHelper {
         return false;
     }
 
-    public int getUserId (String email){
+    public Customer getUserObject (String email){
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("SELECT id FROM user WHERE TRIM(email) = '"+email.trim()+"'", null);
+        Cursor cursor = db.rawQuery("SELECT * FROM user WHERE TRIM(email) = '"+email.trim()+"'", null);
         int userId = 0;
+        String userName;
+        String userEmail;
+        String userPhone;
+        String userPass;
+
+        Customer cust = null;
 
         //System.out.println(cursor.getCount());
         if (cursor.moveToFirst()) {
             do {
                 userId = Integer.parseInt(cursor.getString(cursor.getColumnIndex("id")));
+                userName = cursor.getString(cursor.getColumnIndex("name"));
+                userEmail = cursor.getString(cursor.getColumnIndex("email"));
+                userPhone = cursor.getString(cursor.getColumnIndex("nohp"));
+                userPass = cursor.getString(cursor.getColumnIndex("password"));
+                cust = new Customer(userId, userEmail, userName, userPhone, userPass);
             } while (cursor.moveToNext());
-//            if(cursor.getCount() > 0){
-//                int userId = Integer.parseInt(cursor.toString());
-//                return userId;
-//            }
         }
-//        System.out.println("id " + userId);
+        return cust;
+    }
+
+    public int getUserId (String email){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT id FROM user WHERE TRIM(email) = '"+email.trim()+"'", null);
+        int userId = 0;
+        //System.out.println(cursor.getCount());
+        if (cursor.moveToFirst()) {
+            do {
+                userId = Integer.parseInt(cursor.getString(cursor.getColumnIndex("id")));
+            } while (cursor.moveToNext());
+        }
         return userId;
     }
 

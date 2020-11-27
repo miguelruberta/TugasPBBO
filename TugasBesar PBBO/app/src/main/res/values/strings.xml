@@ -9,6 +9,30 @@
     <string name="name">NAME</string>
     <string name="nohp">NO HP</string>
     <string name="password">PASSWORD</string>
+
+    <string-array name="jenis_kain">
+        <item>Cotton Combed 30s Premium</item>
+        <item>Cotton Combed 30s</item>
+        <item>Cotton Combed 24s</item>
+        <item>Cotton Combed 20s</item>
+        <item>Cotton Bamboo</item>
+    </string-array>
+
+    <string-array name="warna_kain">
+        <item>Hitam</item>
+        <item>Putih</item>
+        <item>Navy</item>
+        <item>Charcoal</item>
+        <item>Maroon</item>
+        <item>Brown</item>
+    </string-array>
+
+    <string-array name="jenis_sablon">
+        <item>Plastisol</item>
+        <item>Discharge</item>
+        <item>Rubber</item>
+    </string-array>
+
     <string name="hintNama">Budi Doremi</string>
     <string name="hintEmail">example@gmail.com</string>
     <string name="hintNohp">085213188863</string>
