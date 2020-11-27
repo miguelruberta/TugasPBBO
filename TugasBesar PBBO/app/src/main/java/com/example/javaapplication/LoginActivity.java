@@ -20,7 +20,6 @@ public class LoginActivity extends AppCompatActivity {
     private EditText txtWarning2;
     private EditText txtEmail;
     private EditText txtPassword;
-//    private EditText txtName;
     private DBHelper db;
 
     @Override
@@ -61,13 +60,13 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void goToHome() {
-        Intent intent = new Intent(this, BerandaActivity.class);
+        Intent intent = new Intent(this, HomeActivity.class); // HomeActivity
         startActivity(intent);
     }
 
     public void goToBeranda(Customer cust) {
         Customer customer = cust;
-        Intent intent = new Intent (this, BerandaActivity.class);
+        Intent intent = new Intent (this, ProfileActivity.class); //BerandaActivity
         intent.putExtra("customer", customer);
         startActivity(intent);
     }
