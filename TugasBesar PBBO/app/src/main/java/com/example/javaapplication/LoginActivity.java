@@ -51,10 +51,9 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Selamat datang " + email + "!", Toast.LENGTH_SHORT).show();
                     Customer cust = db.getUserObject(email);
                     goToBeranda(cust);
-                    Toast.makeText(LoginActivity.this, "Selamat datang " + "!", Toast.LENGTH_SHORT).show();
-                    goToHome();
                 } else {
                     Toast.makeText(LoginActivity.this, "Login Gagal", Toast.LENGTH_SHORT).show();
+                    //goToHome();
                 }
             }
         });
