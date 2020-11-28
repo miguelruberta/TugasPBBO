@@ -38,8 +38,6 @@
     <string name="hintNohp">085213188863</string>
     <string name="hintPassword">Type your password</string>
     <string name="est">est 2020</string>
-<<<<<<< HEAD
-=======
     <string name="profile">Profile</string>
->>>>>>> 1e9c305f8d8805ffe632509151879cc5ed70686f
+
 </resources>

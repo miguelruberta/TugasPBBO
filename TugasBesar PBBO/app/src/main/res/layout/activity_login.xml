@@ -52,11 +52,7 @@
             android:layout_marginLeft="10dp"
             android:text="@string/email"
             android:textSize="35sp"/>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 1e9c305f8d8805ffe632509151879cc5ed70686f
         <EditText
             android:id="@+id/input_email"
             android:layout_marginLeft="10sp"
@@ -67,13 +63,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
             android:layout_marginLeft="10sp"
             android:layout_marginTop="10sp"
-=======
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
->>>>>>> 1e9c305f8d8805ffe632509151879cc5ed70686f
             android:text="@string/password"
             android:textSize="35sp"/>
 
