@@ -3,15 +3,18 @@ package com.example.javaapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.javaapplication.Model.Customer;
+import com.example.javaapplication.Model.Vendor;
 
 import java.lang.reflect.Array;
 
@@ -31,6 +34,8 @@ public class CreateOrderActivity extends AppCompatActivity implements AdapterVie
     private EditText inputXL;
 
     private Customer customer = new Customer();
+
+    private ImageButton btnPesan;
 
     @SuppressLint("ResourceType")
     @Override
@@ -64,6 +69,8 @@ public class CreateOrderActivity extends AppCompatActivity implements AdapterVie
         inputM = (EditText) findViewById(R.id.input_m);
         inputL = (EditText) findViewById(R.id.input_l);
         inputXL = (EditText) findViewById(R.id.input_xl);
+
+        btnPesan = (ImageButton) findViewById(R.id.pesanButton);
     }
 
     @Override
@@ -88,5 +95,23 @@ public class CreateOrderActivity extends AppCompatActivity implements AdapterVie
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
 
+    }
+
+    public void goToBeranda(Customer customer){
+        Intent intent = new Intent(this, BerandaActivity.class);
+        intent.putExtra("customer", customer);
+        startActivity(intent);
+    }
+
+    public void goToProfile(Customer customer) {
+        Intent intent = new Intent(this, BerandaActivity.class);
+        intent.putExtra("customer", customer);
+        startActivity(intent);
+    }
+
+    public void goToOrders(Customer customer) {
+        Intent intent = new Intent(this, BerandaActivity.class);
+        intent.putExtra("customer", customer);
+        startActivity(intent);
     }
 }

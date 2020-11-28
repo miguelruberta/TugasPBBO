@@ -33,6 +33,13 @@
         <item>Rubber</item>
     </string-array>
 
+    <string-array name="status_order">
+        <item>Diterima</item>
+        <item>Dibayar</item>
+        <item>Produksi</item>
+        <item>Selesai</item>
+    </string-array>
+
     <string name="hintNama">Budi Doremi</string>
     <string name="hintEmail">example@gmail.com</string>
     <string name="hintNohp">085213188863</string>

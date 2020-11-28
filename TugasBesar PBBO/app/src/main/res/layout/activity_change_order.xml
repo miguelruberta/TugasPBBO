@@ -13,49 +13,79 @@
         android:layout_height="88dp"
         android:background="#414141"
         android:gravity="center"
-        android:text="Buat Pesanan"
+        android:text="Ubah Pesanan"
         android:textColor="@color/white"
         android:textSize="24sp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-21dp"
         tools:layout_editor_absoluteY="-1dp" />
 
-    <Spinner
-        android:id="@+id/spinner_kain"
-        android:layout_width="500dp"
-        android:layout_height="86dp"
-        android:layout_marginTop="100dp"
-        android:backgroundTint="@color/white"
-        android:textColor="@color/white"
-        android:textSize="15dp"
-        android:padding="5dp"
-        android:layout_marginHorizontal="40dp"/>
+    <TextView
+        android:layout_width="286dp"
+        android:layout_height="500dp"
+        android:text="Warna Kaos   : "
+        android:layout_marginTop="135dp"
+        android:layout_marginHorizontal="40dp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/warnaKaos"
+        android:layout_width="286dp"
+        android:layout_height="500dp"
+        android:text="Hitam"
+        android:layout_marginTop="135dp"
+        android:layout_marginLeft="140dp"
+        android:textColor="@color/white"/>
 
     <TextView
         android:layout_width="286dp"
         android:layout_height="500dp"
-        android:text="___________________________________________"
-        android:layout_marginTop="160dp"
+        android:text="Jumlah Kaos : "
+        android:layout_marginTop="165dp"
         android:layout_marginHorizontal="40dp"
         android:textColor="@color/white"/>
 
-    <Spinner
-        android:id="@+id/spinner_warna"
-        android:layout_width="match_parent"
-        android:layout_height="86dp"
-        android:layout_marginTop="180dp"
-        android:layout_marginHorizontal="40dp"
-        android:backgroundTint="@color/white"
-        android:textColor="#FFFFFF"
-        android:textSize="15dp"
-        android:padding="5dp"/>
+    <TextView
+        android:id="@+id/jumlahKaos"
+        android:layout_width="286dp"
+        android:layout_height="500dp"
+        android:text="0"
+        android:layout_marginTop="165dp"
+        android:layout_marginLeft="140dp"
+        android:textColor="@color/white"/>
 
     <TextView
         android:layout_width="286dp"
-        android:layout_height="300dp"
-        android:text="___________________________________________"
-        android:layout_marginTop="240dp"
+        android:layout_height="500dp"
+        android:text="Jenis Kaos     : "
+        android:layout_marginTop="195dp"
         android:layout_marginHorizontal="40dp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/jenisKaos"
+        android:layout_width="286dp"
+        android:layout_height="500dp"
+        android:text="Combed 30s"
+        android:layout_marginTop="195dp"
+        android:layout_marginLeft="140dp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="286dp"
+        android:layout_height="500dp"
+        android:text="Jenis Sablon : "
+        android:layout_marginTop="225dp"
+        android:layout_marginHorizontal="40dp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/jenisSablon"
+        android:layout_width="286dp"
+        android:layout_height="500dp"
+        android:text="Plastisol"
+        android:layout_marginTop="225dp"
+        android:layout_marginLeft="140dp"
         android:textColor="@color/white"/>
 
     <TextView
@@ -76,14 +106,15 @@
         android:textSize="15dp"
         android:textColor="@color/white"/>
 
-    <EditText
+    <TextView
         android:id="@+id/input_s"
         android:layout_width="35dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="310dp"
+        android:layout_marginTop="325dp"
         android:layout_marginLeft="60dp"
         android:textSize="15dp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:text="0"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -94,14 +125,15 @@
         android:textSize="15dp"
         android:textColor="@color/white"/>
 
-    <EditText
+    <TextView
         android:id="@+id/input_m"
         android:layout_width="35dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="310dp"
-        android:layout_marginLeft="130dp"
+        android:layout_marginTop="325dp"
+        android:layout_marginLeft="135dp"
         android:textSize="15dp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:text="0"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -112,14 +144,15 @@
         android:textSize="15dp"
         android:textColor="@color/white"/>
 
-    <EditText
+    <TextView
         android:id="@+id/input_l"
         android:layout_width="35dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="310dp"
+        android:layout_marginTop="325dp"
         android:layout_marginLeft="200dp"
         android:textSize="15dp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:text="0"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -130,17 +163,18 @@
         android:textSize="15dp"
         android:textColor="@color/white"/>
 
-    <EditText
+    <TextView
         android:id="@+id/input_xl"
         android:layout_width="35dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="310dp"
+        android:layout_marginTop="325dp"
         android:layout_marginLeft="280dp"
         android:textSize="15dp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:text="0"/>
 
     <Spinner
-        android:id="@+id/spinner_sablon"
+        android:id="@+id/spinner_status_order"
         android:layout_width="match_parent"
         android:layout_height="86dp"
         android:layout_marginTop="350dp"
@@ -219,12 +253,12 @@
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/pesanButton"
+        android:id="@+id/simpanOrder"
         android:layout_width="500dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/btnorder"
+        android:src="@drawable/btnchangeorder"
         android:background="@null"
-        android:layout_marginTop="640dp"/>
+        android:layout_marginTop="625dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
