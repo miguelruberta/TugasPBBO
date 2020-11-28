@@ -1,9 +1,276 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PaymentActivity">
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <TextView
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pembayaran"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jenis Kain"/>
+
+            <TextView
+                android:textSize="18sp"
+                android:layout_marginLeft="150dp"
+                android:id="@+id/jenis_kain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Result Here"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Warna"/>
+
+            <TextView
+                android:textSize="18sp"
+                android:layout_marginLeft="180dp"
+                android:id="@+id/jenis_warna"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Result Here"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ukuran"/>
+
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S : "
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/total_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="M : "
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/total_m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="L : "
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/total_l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="XL : "
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/total_XL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jenis Sablon"/>
+
+            <TextView
+                android:textSize="18sp"
+                android:layout_marginLeft="130dp"
+                android:id="@+id/jenis_sablon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Result Here"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jumlah Order"/>
+
+            <TextView
+                android:textSize="18sp"
+                android:layout_marginLeft="124dp"
+                android:id="@+id/jumlah_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Result Here"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Biaya"/>
+
+            <TextView
+                android:textSize="18sp"
+                android:layout_marginLeft="144dp"
+                android:id="@+id/total_biaya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Result Here"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_marginTop="130dp"
+            android:id="@+id/button_bayar"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/buttonBayar"/>
+
+        <ImageButton
+            android:id="@+id/button_cancel"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/buttonCancel"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:background="fffffff"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_beranda"
+            android:src="@drawable/home_black"/>
+
+        <ImageButton
+            android:background="fffffff"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_pesan"
+            android:src="@drawable/order_list_white"/>
+
+        <ImageButton
+            android:background="fffffff"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_riwayat"
+            android:src="@drawable/history_black"/>
+
+        <ImageButton
+            android:background="fffffff"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_profile"
+            android:src="@drawable/profile_black"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
