@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity"
+    android:orientation="vertical"
+    android:background="@color/beranda">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:text="@string/profile"
+        android:textSize="24sp"
+        android:background="#414141"
+        android:textColor="@color/white"
+        android:gravity="center">
+    </TextView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:gravity="center"
+        android:src="@drawable/profile_foreground"
+        android:layout_marginTop="70dp">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/profile_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="360dp"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="test">
+    </TextView>
+
+    <TextView
+        android:id="@+id/profile_nohp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="410dp"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="test1">
+    </TextView>
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="460dp"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="test2">
+    </TextView>
+
+    <ImageButton
+        android:id="@+id/ubahprofil"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="530dp"
+        android:src="@drawable/btn_ubah_profile"
+        android:background="@null"
+        android:layout_marginHorizontal="50dp">
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/logout"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="605dp"
+        android:src="@drawable/btn_logout"
+        android:background="@null"
+        android:layout_marginHorizontal="50dp">
+    </ImageButton>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="#414141"
+        android:gravity="bottom|center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/home_black" />
+
+        <ImageButton
+            android:id="@+id/orderButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/order_list_black"/>
+
+        <ImageButton
+            android:id="@+id/historyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/history_black"/>
+
+        <ImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/profile_white"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JavaApplication">
 
+<<<<<<< HEAD
+=======
+        <activity android:name=".ProfileActivity"></activity>
+
+>>>>>>> 1e9c305f8d8805ffe632509151879cc5ed70686f
         <activity android:name=".CreateOrderActivity"></activity>
         <activity android:name=".PaymentActivity"></activity>
         <activity android:name=".OrderActivity" />
