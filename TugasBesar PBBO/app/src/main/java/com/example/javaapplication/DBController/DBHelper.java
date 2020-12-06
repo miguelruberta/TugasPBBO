@@ -3,9 +3,17 @@ package com.example.javaapplication.DBController;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+
+import java.security.InvalidKeyException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.Key;
 
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.SecretKeySpec;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -13,6 +21,7 @@ import android.widget.Toast;
 
 import com.example.javaapplication.EditProfileActivity;
 import com.example.javaapplication.Model.Customer.Customer;
+
 
 public class DBHelper extends SQLiteOpenHelper {
 
@@ -46,7 +55,7 @@ public class DBHelper extends SQLiteOpenHelper {
 //                new String[]{password}, null, null, null);
 
         if (cursor.getCount() > 0) {
-            String y = md5(password);
+            String y = password;
             cursor.moveToFirst();
             Log.d("ADebugTag X", "Value: " + (cursor.getString(2)));
 //            Log.d("ADebugTag X", "Value: " + (x));
@@ -65,32 +74,33 @@ public class DBHelper extends SQLiteOpenHelper {
         }
     }
 
-    public static final String md5(final String p){
-        final String md5 = "md5";
-        try{
-            MessageDigest digest = java.security.MessageDigest.getInstance(md5);
-            digest.update(p.getBytes());
-            byte messageDigest[] = digest.digest();
-            StringBuilder hexString = new StringBuilder();
+//    public static final String md5(final String p){
+//        final String md5 = "md5";
+//        try{
+//            MessageDigest digest = java.security.MessageDigest.getInstance(md5);
+//            digest.update(p.getBytes());
+//            byte messageDigest[] = digest.digest();
+//            StringBuilder hexString = new StringBuilder();
+//
+//            for (byte aMessageDigest : messageDigest) {
+//                String h = Integer.toHexString(0xFF & aMessageDigest);
+//                while (h.length() < 2)
+//                    h = "0" + h;
+//                hexString.append(h);
+//            }
+//            return hexString.toString();
+//
+//        } catch (NoSuchAlgorithmException e){
+//            e.printStackTrace();
+//        }
+//
+//        return "";
+//    }
 
-            for (byte aMessageDigest : messageDigest) {
-                String h = Integer.toHexString(0xFF & aMessageDigest);
-                while (h.length() < 2)
-                    h = "0" + h;
-                hexString.append(h);
-            }
-            return hexString.toString();
 
-        } catch (NoSuchAlgorithmException e){
-            e.printStackTrace();
-        }
-
-        return "";
-    }
 
     public boolean insertUser (String name, String password, String email, String nohp){
         SQLiteDatabase db = this.getWritableDatabase();
-        password = md5(password);
         ContentValues contentValues = new ContentValues();
         contentValues.put("name", name);
         contentValues.put("password", password);
@@ -106,7 +116,6 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     public boolean updateUser (String password, String email, String nohp){
-        password = md5(password);
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("email", email);
