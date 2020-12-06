@@ -1,4 +1,4 @@
-package com.example.javaapplication.Model;
+package com.example.javaapplication.Model.Designer;
 
 public class Designer {
     private String email;

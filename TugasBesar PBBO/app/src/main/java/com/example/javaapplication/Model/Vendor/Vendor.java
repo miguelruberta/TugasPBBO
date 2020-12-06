@@ -1,4 +1,4 @@
-package com.example.javaapplication.Model;
+package com.example.javaapplication.Model.Vendor;
 
 public class Vendor {
     private String id;
@@ -8,7 +8,6 @@ public class Vendor {
     private String jamKerja;
     private String name;
     private String phoneNum;
-    public Production m_Production;
 
     public Vendor(){
 

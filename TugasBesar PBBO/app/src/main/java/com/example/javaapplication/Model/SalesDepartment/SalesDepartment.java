@@ -1,4 +1,4 @@
-package com.example.javaapplication.Model;
+package com.example.javaapplication.Model.SalesDepartment;
 
 public class SalesDepartment {
     private String email;

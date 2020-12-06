@@ -13,10 +13,7 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.javaapplication.Model.Customer;
-import com.example.javaapplication.Model.Vendor;
-
-import java.lang.reflect.Array;
+import com.example.javaapplication.Model.Customer.Customer;
 
 public class CreateOrderActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 

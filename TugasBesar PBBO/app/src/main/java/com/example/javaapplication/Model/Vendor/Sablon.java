@@ -1,4 +1,4 @@
-package com.example.javaapplication.Model;
+package com.example.javaapplication.Model.Vendor;
 
 public class Sablon {
     private String jenisSablon;
