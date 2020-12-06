@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.example.javaapplication.Model.Customer;
+import com.example.javaapplication.Model.Customer.Customer;
 
 public class BerandaActivity extends AppCompatActivity {
 
@@ -62,9 +62,9 @@ public class BerandaActivity extends AppCompatActivity {
 //        startActivity(intent);
 //    }
 
-//    public void goToProfil(Customer customer){
-//        Intent intent = new Intent(this, ProfileActivity.class);
-//        intent.putExtra("customer", customer);
-//        startActivity(intent);
-//    }
+    public void goToProfil(Customer customer){
+        Intent intent = new Intent(this, ProfileActivity.class);
+        intent.putExtra("customer", customer);
+        startActivity(intent);
+    }
 }

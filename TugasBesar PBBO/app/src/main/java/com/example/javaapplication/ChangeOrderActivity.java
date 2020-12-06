@@ -3,17 +3,15 @@ package com.example.javaapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.example.javaapplication.Model.Vendor;
+import com.example.javaapplication.Model.Vendor.Vendor;
 
 public class ChangeOrderActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 

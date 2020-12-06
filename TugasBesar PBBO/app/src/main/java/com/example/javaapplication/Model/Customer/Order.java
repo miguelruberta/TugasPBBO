@@ -1,4 +1,7 @@
-package com.example.javaapplication.Model;
+package com.example.javaapplication.Model.Customer;
+
+import com.example.javaapplication.Model.Vendor.Kaos;
+import com.example.javaapplication.Model.Vendor.Sablon;
 
 import java.util.Date;
 

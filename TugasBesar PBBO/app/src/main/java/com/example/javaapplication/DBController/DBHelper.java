@@ -9,8 +9,10 @@ import java.security.NoSuchAlgorithmException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import android.widget.Toast;
 
-import com.example.javaapplication.Model.Customer;
+import com.example.javaapplication.EditProfileActivity;
+import com.example.javaapplication.Model.Customer.Customer;
 
 public class DBHelper extends SQLiteOpenHelper {
 
@@ -25,6 +27,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 "password TEXT NOT NULL, " +
                 "email TEXT NOT NULL, " +
                 "nohp TEXT NOT NULL)");
+
     }
 
     @Override
@@ -103,12 +106,15 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     public boolean updateUser (String password, String email, String nohp){
+        password = md5(password);
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("email", email);
         contentValues.put("password", password);
         contentValues.put("nohp", nohp);
         Cursor cursor = db.rawQuery("SELECT * FROM user WHERE email = ?", new String[]{email});
+
+
 
         if(cursor.getCount() > 0){
             long result = db.update("user", contentValues, "email=?", new String[]{email});
@@ -120,6 +126,8 @@ public class DBHelper extends SQLiteOpenHelper {
         } else {
             return false;
         }
+
+
     }
 
     public boolean deleteUser (String name){
@@ -195,4 +203,9 @@ public class DBHelper extends SQLiteOpenHelper {
 
         return cursor;
     }
+
+
+
+
+
 }

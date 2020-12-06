@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.example.javaapplication.Model.Customer;
+import com.example.javaapplication.Model.Customer.Customer;
 
 public class OrderActivity extends AppCompatActivity {
 

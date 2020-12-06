@@ -1,4 +1,6 @@
-package com.example.javaapplication.Model;
+package com.example.javaapplication.Model.SalesDepartment;
+
+import com.example.javaapplication.Model.Customer.Customer;
 
 public class CustomerPayment {
     private Customer customer;

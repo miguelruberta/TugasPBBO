@@ -1,4 +1,6 @@
-package com.example.javaapplication.Model;
+package com.example.javaapplication.Model.Vendor;
+
+import com.example.javaapplication.Model.Designer.Design;
 
 import java.util.Date;
 

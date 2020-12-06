@@ -3,14 +3,10 @@ package com.example.javaapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.content.Intent;
-import android.view.View;
 import android.widget.TextView;
 
 import com.example.javaapplication.DBController.DBHelper;
-import com.example.javaapplication.Model.Customer;
-
-import org.w3c.dom.Text;
+import com.example.javaapplication.Model.Customer.Customer;
 
 public class ProfileActivity extends AppCompatActivity {
 

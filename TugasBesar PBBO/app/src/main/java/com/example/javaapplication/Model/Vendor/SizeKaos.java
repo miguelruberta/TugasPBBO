@@ -1,4 +1,4 @@
-package com.example.javaapplication.Model;
+package com.example.javaapplication.Model.Vendor;
 
 public class SizeKaos {
     private char id;
