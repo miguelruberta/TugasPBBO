@@ -1,9 +1,8 @@
-package com.example.javaapplication.Model;
+package com.example.javaapplication.Model.Vendor;
 
 public class Kain {
-    private char id;
+    private int id;
     private String type;
-    public Kaos m_Kaos;
 
     public Kain(){
 

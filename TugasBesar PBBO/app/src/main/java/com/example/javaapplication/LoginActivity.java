@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.javaapplication.DBController.DBHelper;
-import com.example.javaapplication.Model.Customer;
+import com.example.javaapplication.Model.Customer.Customer;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
                     Customer cust = db.getUserObject(email);
                     goToBeranda(cust);
                     Toast.makeText(LoginActivity.this, "Selamat datang " + "!", Toast.LENGTH_SHORT).show();
-                    goToHome();
+//                    goToHome();
                 } else {
                     Toast.makeText(LoginActivity.this, "Login Gagal", Toast.LENGTH_SHORT).show();
                     //goToHome();
@@ -68,7 +68,13 @@ public class LoginActivity extends AppCompatActivity {
 
     public void goToBeranda(Customer cust) {
         Customer customer = cust;
-        Intent intent = new Intent (this, ProfileActivity.class); //BerandaActivity
+        Intent intent = new Intent (this, BerandaActivity.class); //BerandaActivity
+        intent.putExtra("customer", customer);
+        startActivity(intent);
+    }
+
+    public void goToOrder(Customer customer){
+        Intent intent = new Intent(this, CreateOrderActivity.class);
         intent.putExtra("customer", customer);
         startActivity(intent);
     }

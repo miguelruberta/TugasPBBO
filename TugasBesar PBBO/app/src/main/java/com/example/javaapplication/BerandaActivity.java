@@ -1,13 +1,14 @@
 package com.example.javaapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.example.javaapplication.Model.Customer;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.javaapplication.Model.Customer.Customer;
+
 
 public class BerandaActivity extends AppCompatActivity {
 
@@ -42,6 +43,13 @@ public class BerandaActivity extends AppCompatActivity {
                 goToOrder(customer);
             }
         });
+
+        btnProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToProfile(customer);
+            }
+        });
     }
 
     public void goToBeranda(Customer customer) {
@@ -62,9 +70,9 @@ public class BerandaActivity extends AppCompatActivity {
 //        startActivity(intent);
 //    }
 
-//    public void goToProfil(Customer customer){
-//        Intent intent = new Intent(this, ProfileActivity.class);
-//        intent.putExtra("customer", customer);
-//        startActivity(intent);
-//    }
+    public void goToProfile(Customer customer){
+        Intent intent = new Intent(this, ProfileActivity.class);
+        intent.putExtra("customer", customer);
+        startActivity(intent);
+    }
 }
