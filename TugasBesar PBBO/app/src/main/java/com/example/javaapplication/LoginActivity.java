@@ -73,6 +73,12 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void goToOrder(Customer customer){
+        Intent intent = new Intent(this, CreateOrderActivity.class);
+        intent.putExtra("customer", customer);
+        startActivity(intent);
+    }
+
     public void validasi(EditText a, EditText b) {
 
         if (txtWarning.getText().toString().length() == 0 & txtWarning2.getText().toString().length() == 0) {

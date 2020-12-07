@@ -5,7 +5,6 @@ public class SizeKaos {
     private double lebar_dada;
     private double panjang_badan;
     private double panjang_lengan;
-    public Kaos m_Kaos;
 
     public SizeKaos(){
 

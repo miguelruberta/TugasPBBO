@@ -21,12 +21,13 @@
         tools:layout_editor_absoluteY="-1dp" />
 
     <Spinner
+        android:entries="@array/jenis_kain"
         android:id="@+id/spinner_kain"
         android:layout_width="500dp"
         android:layout_height="86dp"
         android:layout_marginTop="100dp"
         android:backgroundTint="@color/white"
-        android:textColor="@color/white"
+        android:textColor="#FFFFFF"
         android:textSize="15dp"
         android:padding="5dp"
         android:layout_marginHorizontal="40dp"/>
@@ -40,6 +41,7 @@
         android:textColor="@color/white"/>
 
     <Spinner
+        android:entries="@array/warna_kain"
         android:id="@+id/spinner_warna"
         android:layout_width="match_parent"
         android:layout_height="86dp"
@@ -149,6 +151,7 @@
         android:textColor="#e71b23"/>
 
     <Spinner
+        android:entries="@array/jenis_sablon"
         android:id="@+id/spinner_sablon"
         android:layout_width="match_parent"
         android:layout_height="86dp"
@@ -161,7 +164,7 @@
 
     <TextView
         android:layout_width="286dp"
-        android:layout_height="300dp"
+        android:layout_height="30dp"
         android:text="___________________________________________"
         android:layout_marginTop="430dp"
         android:layout_marginHorizontal="40dp"
@@ -169,19 +172,19 @@
 
     <TextView
         android:layout_width="286dp"
-        android:layout_height="300dp"
+        android:layout_height="30dp"
         android:text="Butuh jasa desain?"
         android:textSize="15dp"
-        android:layout_marginTop="490dp"
+        android:layout_marginTop="460dp"
         android:layout_marginHorizontal="40dp"
         android:textColor="@color/white"/>
 
     <TextView
         android:layout_width="286dp"
-        android:layout_height="300dp"
+        android:layout_height="30dp"
         android:text="Silahkan hubungi designer kami :"
         android:textSize="15dp"
-        android:layout_marginTop="515dp"
+        android:layout_marginTop="485dp"
         android:layout_marginHorizontal="40dp"
         android:textColor="@color/white"/>
 
@@ -189,7 +192,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="545dp"
+        android:layout_marginTop="515dp"
         android:layout_marginHorizontal="40dp">
 
         <ImageView
@@ -199,7 +202,7 @@
 
         <TextView
             android:layout_width="286dp"
-            android:layout_height="300dp"
+            android:layout_height="30dp"
             android:text="Whatsapp - 081285499934 (Adrian)"
             android:textSize="15dp"
             android:textColor="@color/white"
@@ -210,7 +213,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="570dp"
+        android:layout_marginTop="540dp"
         android:layout_marginHorizontal="40dp">
 
         <ImageView
@@ -220,7 +223,7 @@
 
         <TextView
             android:layout_width="286dp"
-            android:layout_height="300dp"
+            android:layout_height="30dp"
             android:text="Whatsapp - 081388740921 (Pablo)"
             android:textSize="15dp"
             android:textColor="@color/white"
@@ -233,7 +236,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/btnorder"
         android:background="@null"
-        android:layout_marginTop="640dp"/>
+        android:layout_marginTop="580dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"

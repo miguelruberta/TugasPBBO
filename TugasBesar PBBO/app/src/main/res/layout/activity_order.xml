@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,9 +8,10 @@
     tools:context=".BerandaActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewPesanan"
         android:layout_width="match_parent"
         android:layout_height="88dp"
+        android:layout_alignParentTop="true"
         android:background="#414141"
         android:gravity="center"
         android:text="Pesanan"
@@ -24,33 +25,54 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewPesanan"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="List Pesanan"
         android:textColor="@color/white"
         android:textSize="15dp"
-        android:text="List Pesanan"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="120dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="120dp" />
+
+
+    <ScrollView
+        android:id="@+id/scrollViewListPesanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3" />
 
     <LinearLayout
+        android:id="@+id/btnBuatPesanan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingHorizontal="40dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="169dp">
+        android:layout_below="@+id/scrollViewListPesanan"
+        android:gravity="center">
+        <ImageButton
+            android:id="@+id/buatPesananButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:src="@drawable/icon_plus"
+            android:scaleType="fitCenter"/>
 
-        <fragment
-            android:id="@id/fragment_invoice"
-            android:name="com.example.javaapplication.InvoiceCardView"
+        <TextView
+            android:id="@+id/txtBuatPesanan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:ignore="MissingConstraints" />
+            android:text="Buat Pesanan"
+            android:textColor="@color/white"
+            android:textSize="15dp"/>
     </LinearLayout>
 
+
     <LinearLayout
+        android:id="@+id/menuBar"
         android:layout_width="match_parent"
         android:layout_height="72dp"
+        android:layout_alignParentBottom="true"
         android:background="#414141"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -91,4 +113,4 @@
     </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -36,7 +36,6 @@ public class DBHelper extends SQLiteOpenHelper {
                 "password TEXT NOT NULL, " +
                 "email TEXT NOT NULL, " +
                 "nohp TEXT NOT NULL)");
-
     }
 
     @Override

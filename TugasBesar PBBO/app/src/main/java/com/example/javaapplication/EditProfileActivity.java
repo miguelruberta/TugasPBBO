@@ -32,6 +32,11 @@ public class EditProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
 
+        ImageButton btnBeranda = (ImageButton) findViewById(R.id.homeButton);
+        ImageButton btnHistory = (ImageButton) findViewById(R.id.historyButton);
+        ImageButton btnOrder = (ImageButton) findViewById(R.id.orderButton);
+        ImageButton btnProfile = (ImageButton) findViewById(R.id.profileButton);
+
         TextView nama = (TextView) findViewById(R.id.edit_nama);
         TextView email = (TextView) findViewById(R.id.edit_email);
         EditText notelp = (EditText) findViewById(R.id.edit_nohp);
@@ -51,6 +56,27 @@ public class EditProfileActivity extends AppCompatActivity {
         email.setText(StringEmail);
         notelp.setText(StringTelp);
         password.setText(StringPass);
+
+        btnBeranda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToBeranda(customer);
+            }
+        });
+
+        btnOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToOrder(customer);
+            }
+        });
+
+        btnProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToProfil(customer);
+            }
+        });
 
         editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,7 +110,7 @@ public class EditProfileActivity extends AppCompatActivity {
                         int id = dbH.getUserId(mail);
                         System.out.println("id = " + id);
                         Toast.makeText(EditProfileActivity.this, "Insert data berhasil", Toast.LENGTH_SHORT).show();
-                        goToProfil(id, mail, StringNama, noHP, pass);
+                        goToProfile(id, mail, StringNama, noHP, pass);
                     }
                 } else {
                     Toast.makeText(EditProfileActivity.this, "Terdapat data kosong", Toast.LENGTH_SHORT).show();
@@ -112,8 +138,14 @@ public class EditProfileActivity extends AppCompatActivity {
 //        startActivity(intent);
 //    }
 
-    public void goToProfil(int id, String email, String name, String noHP, String pass) {
+    public void goToProfile(int id, String email, String name, String noHP, String pass) {
         Customer customer = new Customer(id, email, name, noHP, pass);
+        Intent intent = new Intent(this, ProfileActivity.class);
+        intent.putExtra("customer", customer);
+        startActivity(intent);
+    }
+
+    public void goToProfil(Customer customer){
         Intent intent = new Intent(this, ProfileActivity.class);
         intent.putExtra("customer", customer);
         startActivity(intent);

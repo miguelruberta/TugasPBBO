@@ -1,14 +1,32 @@
 package com.example.javaapplication.Model.Vendor;
 
 public class Kaos {
-    private Kain jenisKain;
-    private SizeKaos size;
-    private char tipeKaos;
+    private String tipeKain;
     private String warna;
-    public Production m_Production;
 
     public Kaos(){
 
+    }
+
+    public Kaos(String kain,String warna){
+        this.tipeKain = kain;
+        this.warna = warna;
+    }
+
+    public String getTipeKain() {
+        return tipeKain;
+    }
+
+    public void setTipeKain(String tipeKain) {
+        this.tipeKain = tipeKain;
+    }
+
+    public String getWarna() {
+        return warna;
+    }
+
+    public void setWarna(String warna) {
+        this.warna = warna;
     }
 
     public void finalize() throws Throwable {
