@@ -70,18 +70,15 @@ public class DBHelperOrder extends SQLiteOpenHelper {
         }
     }
 
-    public boolean editOrder(){
+    public boolean editOrder(int id, String status){ //Untuk Vendor
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("email", email);
-        contentValues.put("password", password);
-        contentValues.put("nohp", nohp);
-        Cursor cursor = db.rawQuery("SELECT * FROM user WHERE email = ?", new String[]{email});
-
+        contentValues.put("status", status);
+        Cursor cursor = db.rawQuery("SELECT * FROM pesanan WHERE idOrder = ?", new String[]{String.valueOf(id)});
 
 
         if(cursor.getCount() > 0){
-            long result = db.update("user", contentValues, "email=?", new String[]{email});
+            long result = db.update("pesanan", contentValues, "idOrder=?", new String[]{String.valueOf(id)});
             if(result == -1){
                 return false;
             }else{

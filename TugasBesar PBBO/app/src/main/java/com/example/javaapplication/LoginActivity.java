@@ -68,7 +68,13 @@ public class LoginActivity extends AppCompatActivity {
 
     public void goToBeranda(Customer cust) {
         Customer customer = cust;
-        Intent intent = new Intent (this, BerandaActivity.class); //BerandaActivity
+        Intent intent = new Intent (this, CreateOrderActivity.class); //BerandaActivity
+        intent.putExtra("customer", customer);
+        startActivity(intent);
+    }
+
+    public void goToOrder(Customer customer){
+        Intent intent = new Intent(this, CreateOrderActivity.class);
         intent.putExtra("customer", customer);
         startActivity(intent);
     }
