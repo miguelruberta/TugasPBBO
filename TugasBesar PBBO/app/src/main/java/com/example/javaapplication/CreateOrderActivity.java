@@ -13,6 +13,8 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.javaapplication.DBController.DBHelper;
+import com.example.javaapplication.DBController.DBHelperOrder;
 import com.example.javaapplication.Model.Customer.Customer;
 
 public class CreateOrderActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
@@ -34,6 +36,20 @@ public class CreateOrderActivity extends AppCompatActivity implements AdapterVie
 
     private ImageButton btnPesan;
 
+    private DBHelperOrder db;
+
+    private String stringKain;
+    private String stringWarna;
+    private String stringSablon;
+    private int S;
+    private int M;
+    private int L;
+    private int XL;
+    private int idCustomer;
+    private int totalOrder = 0;
+    private int totalPrice = 0 ;
+
+
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +59,7 @@ public class CreateOrderActivity extends AppCompatActivity implements AdapterVie
         if(getIntent().getExtras() != null) {
             customer = getIntent().getParcelableExtra("customer");
         }
+//        db = new DBHelperOrder(this);
 
         spinnerKain = (Spinner) findViewById(R.id.spinner_kain);
         spinnerKain.setOnItemSelectedListener(this);
@@ -68,6 +85,42 @@ public class CreateOrderActivity extends AppCompatActivity implements AdapterVie
         inputXL = (EditText) findViewById(R.id.input_xl);
 
         btnPesan = (ImageButton) findViewById(R.id.pesanButton);
+
+        btnPesan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stringKain = spinnerKain.getSelectedItem().toString();
+                stringWarna = spinnerWarna.getSelectedItem().toString();
+                stringSablon = spinnerSablon.getSelectedItem().toString();
+                S = Integer.parseInt(inputS.getText().toString());
+                M = Integer.parseInt(inputM.getText().toString());
+                L = Integer.parseInt(inputL.getText().toString());
+                XL = Integer.parseInt(inputXL.getText().toString());
+                totalOrder = S+M+L+XL;
+
+                if(stringKain == "Cotton Combed 30s Premium"){
+                    totalPrice += totalOrder*45000;
+                }else if (stringKain == "Cotton Combed 30s"){
+                    totalPrice += totalOrder*27500;
+                }else if (stringKain == "Cotton Combed 24s"){
+                    totalPrice += totalOrder*30000;
+                }else if (stringKain == "Cotton Combed 20s"){
+                    totalPrice += totalOrder*35000;
+                }else{
+                    totalPrice += totalOrder*27500;
+                }
+
+                if(stringSablon == "Plastisol"){
+                    totalPrice += totalOrder*25000;
+                }else if (stringSablon == "Discharge"){
+                    totalPrice += totalOrder*30000;
+                }else{
+                    totalPrice += totalOrder*40000;
+                }
+
+
+            }
+        });
     }
 
     @Override
@@ -93,6 +146,8 @@ public class CreateOrderActivity extends AppCompatActivity implements AdapterVie
     public void onPointerCaptureChanged(boolean hasCapture) {
 
     }
+
+
 
     public void goToBeranda(Customer customer){
         Intent intent = new Intent(this, BerandaActivity.class);

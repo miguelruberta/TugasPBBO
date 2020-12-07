@@ -12,9 +12,6 @@ import android.util.Log;
 
 public class DBHelperOrder {
 
-
-
-
     public boolean addOrder(){
 
         return true;
