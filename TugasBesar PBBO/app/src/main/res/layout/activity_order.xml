@@ -26,8 +26,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewPesanan"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
         android:text="List Pesanan"
         android:textColor="@color/white"
         android:textSize="15dp"
@@ -35,38 +35,12 @@
         tools:layout_editor_absoluteX="40dp"
         tools:layout_editor_absoluteY="120dp" />
 
-
-    <ScrollView
-        android:id="@+id/scrollViewListPesanan"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewListPesanan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView3" />
-
-    <LinearLayout
-        android:id="@+id/btnBuatPesanan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_below="@+id/scrollViewListPesanan"
-        android:gravity="center">
-        <ImageButton
-            android:id="@+id/buatPesananButton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:background="#00FFFFFF"
-            android:src="@drawable/icon_plus"
-            android:scaleType="fitCenter"/>
-
-        <TextView
-            android:id="@+id/txtBuatPesanan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Buat Pesanan"
-            android:textColor="@color/white"
-            android:textSize="15dp"/>
-    </LinearLayout>
-
+        android:layout_below="@+id/textView3"
+        tools:listitem="@layout/fragment_invoice_card_view"/>
 
     <LinearLayout
         android:id="@+id/menuBar"
@@ -93,7 +67,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#00FFFFFF"
-            app:srcCompat="@drawable/order_list_white" />
+            app:srcCompat="@drawable/order_list_black" />
 
         <ImageButton
             android:id="@+id/historyButton"
@@ -101,7 +75,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#00FFFFFF"
-            app:srcCompat="@drawable/history_black" />
+            app:srcCompat="@drawable/history_white" />
 
         <ImageButton
             android:id="@+id/profileButton"

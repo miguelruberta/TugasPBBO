@@ -29,8 +29,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="20dp">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView2"
@@ -52,6 +51,7 @@
                 android:textAlignment="center"
                 android:textColor="#707070"
                 android:textSize="30sp"
+                android:layout_gravity="center"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="32dp"
                 tools:layout_editor_absoluteY="800dp" />
@@ -62,7 +62,8 @@
                 app:srcCompat="@drawable/contoh6"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="68dp"
-                tools:layout_editor_absoluteY="442dp" />
+                tools:layout_editor_absoluteY="442dp"
+                android:layout_gravity="center"/>
 
             <ImageView
                 android:layout_width="256dp"
@@ -70,7 +71,8 @@
                 app:srcCompat="@drawable/contoh5"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="68dp"
-                tools:layout_editor_absoluteY="662dp" />
+                tools:layout_editor_absoluteY="662dp"
+                android:layout_gravity="center"/>
 
             <TextView
                 android:id="@+id/textView6"
@@ -82,7 +84,8 @@
                 android:textSize="20sp"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="19dp"
-                tools:layout_editor_absoluteY="227dp" />
+                tools:layout_editor_absoluteY="227dp"
+                android:layout_gravity="center"/>
 
             <TextView
                 android:id="@+id/textView8"
@@ -103,9 +106,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="72dp"
-        android:background="#414141"
-        android:orientation="horizontal"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="70dp"
+        android:background="#414141"
+        android:gravity="bottom|center"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints">

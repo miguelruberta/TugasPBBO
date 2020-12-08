@@ -50,6 +50,13 @@ public class BerandaActivity extends AppCompatActivity {
                 goToProfile(customer);
             }
         });
+
+        btnHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToHistory(customer);
+            }
+        });
     }
 
     public void goToBeranda(Customer customer) {
@@ -64,11 +71,11 @@ public class BerandaActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-//    public void goToHistory(Customer customer){
-//        Intent intent = new Intent(this, HistoryActivity.class);
-//        intent.putExtra("customer", customer);
-//        startActivity(intent);
-//    }
+    public void goToHistory(Customer customer){
+        Intent intent = new Intent(this, OrderActivity.class);
+        intent.putExtra("customer", customer);
+        startActivity(intent);
+    }
 
     public void goToProfile(Customer customer){
         Intent intent = new Intent(this, ProfileActivity.class);

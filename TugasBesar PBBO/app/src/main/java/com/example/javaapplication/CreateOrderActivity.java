@@ -109,10 +109,18 @@ public class CreateOrderActivity extends AppCompatActivity implements AdapterVie
                 goToOrder(customer);
             }
         });
+
         btnProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 goToProfile(customer);
+            }
+        });
+
+        btnHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToHistory(customer);
             }
         });
 
@@ -159,7 +167,7 @@ public class CreateOrderActivity extends AppCompatActivity implements AdapterVie
 
                     if (status) {
                         Toast.makeText(CreateOrderActivity.this, "Insert Order berhasil", Toast.LENGTH_SHORT).show();
-                        goToBeranda(customer);
+                        goToHistory(customer);
                     } else {
                         Toast.makeText(CreateOrderActivity.this, "Insert Order gagal", Toast.LENGTH_SHORT).show();
                     }
@@ -210,11 +218,9 @@ public class CreateOrderActivity extends AppCompatActivity implements AdapterVie
         startActivity(intent);
     }
 
-    //    public void goToHistory(Customer customer){
-//        Intent intent = new Intent(this, HistoryActivity.class);
-//        intent.putExtra("customer", customer);
-//        startActivity(intent);
-//    }
-
-
+        public void goToHistory(Customer customer){
+        Intent intent = new Intent(this, OrderActivity.class);
+        intent.putExtra("customer", customer);
+        startActivity(intent);
+    }
 }
