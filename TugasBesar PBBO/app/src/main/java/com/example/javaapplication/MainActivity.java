@@ -6,11 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.example.javaapplication.VendorView.LoginVendorActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button button_login;
     private Button button_register;
+    private TextView login_admin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +46,14 @@ public class MainActivity extends AppCompatActivity {
                 goToRegister();
             }
         });
+
+        login_admin = (TextView) findViewById(R.id.login_admin);
+        login_admin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToAdmin();
+            }
+        });
     }
 
     public void goToLogin() {
@@ -51,6 +63,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToRegister() {
         Intent intent = new Intent (this, RegisterActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToAdmin() {
+        Intent intent = new Intent (this, LoginVendorActivity.class);
         startActivity(intent);
     }
 }

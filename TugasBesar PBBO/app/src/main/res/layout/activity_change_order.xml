@@ -100,75 +100,18 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="S : "
+        android:text="Total Order : "
         android:layout_marginTop="325dp"
         android:layout_marginLeft="40dp"
         android:textSize="15dp"
         android:textColor="@color/white"/>
 
     <TextView
-        android:id="@+id/input_s"
+        android:id="@+id/input_order"
         android:layout_width="35dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="325dp"
-        android:layout_marginLeft="60dp"
-        android:textSize="15dp"
-        android:textColor="@color/white"
-        android:text="0"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="M : "
-        android:layout_marginTop="325dp"
-        android:layout_marginLeft="110dp"
-        android:textSize="15dp"
-        android:textColor="@color/white"/>
-
-    <TextView
-        android:id="@+id/input_m"
-        android:layout_width="35dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="325dp"
-        android:layout_marginLeft="135dp"
-        android:textSize="15dp"
-        android:textColor="@color/white"
-        android:text="0"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="L : "
-        android:layout_marginTop="325dp"
-        android:layout_marginLeft="180dp"
-        android:textSize="15dp"
-        android:textColor="@color/white"/>
-
-    <TextView
-        android:id="@+id/input_l"
-        android:layout_width="35dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="325dp"
-        android:layout_marginLeft="200dp"
-        android:textSize="15dp"
-        android:textColor="@color/white"
-        android:text="0"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="XL : "
-        android:layout_marginTop="325dp"
-        android:layout_marginLeft="250dp"
-        android:textSize="15dp"
-        android:textColor="@color/white"/>
-
-    <TextView
-        android:id="@+id/input_xl"
-        android:layout_width="35dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="325dp"
-        android:layout_marginLeft="280dp"
+        android:layout_marginLeft="140dp"
         android:textSize="15dp"
         android:textColor="@color/white"
         android:text="0"/>
@@ -182,7 +125,8 @@
         android:backgroundTint="@color/white"
         android:textColor="#FFFFFF"
         android:textSize="15dp"
-        android:padding="5dp"/>
+        android:padding="5dp"
+        android:entries="@array/status_order"/>
 
     <TextView
         android:layout_width="286dp"
@@ -259,53 +203,4 @@
         android:src="@drawable/btnchangeorder"
         android:background="@null"
         android:layout_marginTop="625dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp"
-        android:background="#414141"
-        android:gravity="bottom|center"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints">
-
-        <ImageButton
-            android:id="@+id/homeButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="#00FFFFFF"
-            app:srcCompat="@drawable/home_black" />
-
-        <ImageButton
-            android:id="@+id/orderButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="#00FFFFFF"
-            app:srcCompat="@drawable/order_list_white" />
-
-        <ImageButton
-            android:id="@+id/historyButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="#00FFFFFF"
-            app:srcCompat="@drawable/history_black" />
-
-        <ImageButton
-            android:id="@+id/profileButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="#00FFFFFF"
-            app:srcCompat="@drawable/profile_black" />
-    </LinearLayout>
 </RelativeLayout>

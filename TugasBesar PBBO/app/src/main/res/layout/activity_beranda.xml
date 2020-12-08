@@ -23,14 +23,13 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="580dp"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="411dp"
@@ -41,8 +40,8 @@
                 android:textSize="36sp"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="-9dp"
-                tools:layout_editor_absoluteY="107dp" />
-
+                tools:layout_editor_absoluteY="107dp"
+                android:layout_marginTop="10dp"/>
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
@@ -54,7 +53,8 @@
                 android:layout_gravity="center"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="32dp"
-                tools:layout_editor_absoluteY="800dp" />
+                tools:layout_editor_absoluteY="800dp"
+                android:layout_marginTop="-25dp"/>
 
             <ImageView
                 android:layout_width="256dp"
@@ -63,7 +63,8 @@
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="68dp"
                 tools:layout_editor_absoluteY="442dp"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"/>
 
             <ImageView
                 android:layout_width="256dp"
@@ -98,8 +99,6 @@
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="19dp"
                 tools:layout_editor_absoluteY="398dp" />
-
-
         </LinearLayout>
     </ScrollView>
 
@@ -108,7 +107,7 @@
         android:layout_height="72dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="0dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="5dp"
         android:background="#414141"
         android:gravity="bottom|center"
         android:orientation="horizontal"

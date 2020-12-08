@@ -1,5 +1,8 @@
 package com.example.javaapplication.Model.Customer;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.example.javaapplication.Model.Vendor.Kaos;
 import com.example.javaapplication.Model.Vendor.Sablon;
 
@@ -14,6 +17,7 @@ public class Order {
     private int totalPrice;
     private String status;
     private Customer cust;
+
     public Order(){
 
     }
@@ -27,6 +31,16 @@ public class Order {
         this.totalPrice = totalPrice;
         this.status = status;
         this.cust = cust;
+    }
+
+    public Order(int id, int jumlahOrder, Kaos kaos, String sablon, String tanggal, int totalPrice, String status, int idcust){
+        this.idOrder = id;
+        this.jumlahOrder = jumlahOrder;
+        this.kaos = kaos;
+        this.sablon = sablon;
+        this.tanggal = tanggal;
+        this.totalPrice = totalPrice;
+        this.status = status;
     }
 
     public int getIdOrder() {
@@ -96,4 +110,6 @@ public class Order {
     public void finalize() throws Throwable {
 
     }
+
+
 }

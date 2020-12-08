@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/beranda">
 
     <Button
         android:id="@+id/btn_login"
@@ -29,4 +30,14 @@
         android:text="@string/register"
         android:textSize="50sp">
     </Button>
+
+    <TextView
+        android:id="@+id/login_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login Vendor"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:clickable="true"/>
 </LinearLayout>

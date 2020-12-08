@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#313131"
+    tools:context=".BerandaActivity">
+
+    <TextView
+        android:id="@+id/textViewPesanan"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:layout_alignParentTop="true"
+        android:background="#414141"
+        android:gravity="center"
+        android:text="Pesanan"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="-2dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewPesanan"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="List Pesanan"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="120dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewListPesanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        tools:listitem="@layout/fragment_invoice_card_view"/>
+
+</RelativeLayout>

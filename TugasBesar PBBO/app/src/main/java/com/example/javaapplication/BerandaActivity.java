@@ -60,12 +60,18 @@ public class BerandaActivity extends AppCompatActivity {
     }
 
     public void goToBeranda(Customer customer) {
-        Intent intent = new Intent (this, BerandaActivity.class);
+        Intent intent = new Intent(this, BerandaActivity.class);
         intent.putExtra("customer", customer);
         startActivity(intent);
     }
 
-    public void goToOrder(Customer customer){
+    public void goToProfile(Customer customer) {
+        Intent intent = new Intent(this, ProfileActivity.class);
+        intent.putExtra("customer", customer);
+        startActivity(intent);
+    }
+
+    public void goToOrder(Customer customer) {
         Intent intent = new Intent(this, CreateOrderActivity.class);
         intent.putExtra("customer", customer);
         startActivity(intent);
@@ -73,12 +79,6 @@ public class BerandaActivity extends AppCompatActivity {
 
     public void goToHistory(Customer customer){
         Intent intent = new Intent(this, OrderActivity.class);
-        intent.putExtra("customer", customer);
-        startActivity(intent);
-    }
-
-    public void goToProfile(Customer customer){
-        Intent intent = new Intent(this, ProfileActivity.class);
         intent.putExtra("customer", customer);
         startActivity(intent);
     }

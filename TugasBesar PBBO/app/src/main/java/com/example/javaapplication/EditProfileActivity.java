@@ -78,6 +78,13 @@ public class EditProfileActivity extends AppCompatActivity {
             }
         });
 
+        btnHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToHistory(customer);
+            }
+        });
+
         editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -126,26 +133,26 @@ public class EditProfileActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void goToProfil(Customer customer) {
+        Intent intent = new Intent(this, ProfileActivity.class);
+        intent.putExtra("customer", customer);
+        startActivity(intent);
+    }
+
     public void goToOrder(Customer customer) {
         Intent intent = new Intent(this, CreateOrderActivity.class);
         intent.putExtra("customer", customer);
         startActivity(intent);
     }
 
-//    public void goToHistory(Customer customer){
-//        Intent intent = new Intent(this, HistoryActivity.class);
-//        intent.putExtra("customer", customer);
-//        startActivity(intent);
-//    }
-
-    public void goToProfile(int id, String email, String name, String noHP, String pass) {
-        Customer customer = new Customer(id, email, name, noHP, pass);
-        Intent intent = new Intent(this, ProfileActivity.class);
+    public void goToHistory(Customer customer){
+        Intent intent = new Intent(this, OrderActivity.class);
         intent.putExtra("customer", customer);
         startActivity(intent);
     }
 
-    public void goToProfil(Customer customer){
+    public void goToProfile(int id, String email, String name, String noHP, String pass) {
+        Customer customer = new Customer(id, email, name, noHP, pass);
         Intent intent = new Intent(this, ProfileActivity.class);
         intent.putExtra("customer", customer);
         startActivity(intent);

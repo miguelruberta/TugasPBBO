@@ -58,12 +58,6 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-
-    }
-
-    public void goToHome() {
-        Intent intent = new Intent(this, HomeActivity.class); // HomeActivity
-        startActivity(intent);
     }
 
     public void goToBeranda(Customer cust) {

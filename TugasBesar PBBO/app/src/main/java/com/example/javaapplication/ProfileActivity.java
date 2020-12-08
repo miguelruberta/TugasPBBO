@@ -73,6 +73,13 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
+        btnHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToHistory(customer);
+            }
+        });
+
         btnLogOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,32 +96,27 @@ public class ProfileActivity extends AppCompatActivity {
 
     }
 
-//    public void showNama(Customer cust){
-//
-//        customer = cust;
-//        Intent intent = new Intent (this, ProfileActivity.class);
-//    }
 
     public void goToBeranda(Customer customer) {
-        Intent intent = new Intent (this, BerandaActivity.class);
+        Intent intent = new Intent(this, BerandaActivity.class);
         intent.putExtra("customer", customer);
         startActivity(intent);
     }
 
-    public void goToOrder(Customer customer){
+    public void goToProfile(Customer customer) {
+        Intent intent = new Intent(this, ProfileActivity.class);
+        intent.putExtra("customer", customer);
+        startActivity(intent);
+    }
+
+    public void goToOrder(Customer customer) {
         Intent intent = new Intent(this, CreateOrderActivity.class);
         intent.putExtra("customer", customer);
         startActivity(intent);
     }
 
-//    public void goToHistory(Customer customer){
-//        Intent intent = new Intent(this, HistoryActivity.class);
-//        intent.putExtra("customer", customer);
-//        startActivity(intent);
-//    }
-
-    public void goToProfile(Customer customer){
-        Intent intent = new Intent(this, ProfileActivity.class);
+    public void goToHistory(Customer customer){
+        Intent intent = new Intent(this, OrderActivity.class);
         intent.putExtra("customer", customer);
         startActivity(intent);
     }

@@ -87,33 +87,6 @@ public class OrderActivity extends AppCompatActivity {
         });
     }
 
-//    private void loadFragment(Fragment fragment) {
-//        // load fragment
-//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-//
-//        //frame_container is your layout name in xml file
-//        transaction.replace(R.id.fragment_invoice, fragment);
-//        transaction.addToBackStack(null);
-//        transaction.commit();
-//    }
-
-//    public RecyclerView.Adapter<listOrderAdapter.ListViewHolder> listOrderAdapter(List<Order> list) {
-//        for (Order order : list) {
-//            FragmentManager fragmentManager = getSupportFragmentManager();
-//            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//
-//            InvoiceCardView fragment = new InvoiceCardView();
-//            fragmentTransaction.add(R.id.fragment_invoice, fragment);
-//
-//            invoice.setText("0000"+order.getIdOrder());
-//            date.setText(order.getTanggal());
-//            total.setText(order.getTotalPrice());
-//            status.setText(order.getStatus());
-//
-//            fragmentTransaction.commit();
-//        }
-//    }
-
     public void goToBeranda(Customer customer) {
         Intent intent = new Intent(this, BerandaActivity.class);
         intent.putExtra("customer", customer);
@@ -127,7 +100,7 @@ public class OrderActivity extends AppCompatActivity {
     }
 
     public void goToOrder(Customer customer) {
-        Intent intent = new Intent(this, OrderActivity.class);
+        Intent intent = new Intent(this, CreateOrderActivity.class);
         intent.putExtra("customer", customer);
         startActivity(intent);
     }

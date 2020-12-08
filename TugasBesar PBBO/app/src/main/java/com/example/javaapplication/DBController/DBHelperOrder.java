@@ -75,24 +75,6 @@ public class DBHelperOrder extends SQLiteOpenHelper {
         }
     }
 
-    public boolean editOrder(int id, String status){ //Untuk Vendor
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("status", status);
-        Cursor cursor = db.rawQuery("SELECT * FROM pesanan WHERE idOrder = ?", new String[]{String.valueOf(id)});
-
-        if(cursor.getCount() > 0){
-            long result = db.update("pesanan", contentValues, "idOrder=?", new String[]{String.valueOf(id)});
-            if(result == -1){
-                return false;
-            }else{
-                return true;
-            }
-        } else {
-            return false;
-        }
-    }
-
     public List<Order> getOrderByCust(Customer cust){
         SQLiteDatabase db = this.getWritableDatabase();
         int custId = cust.getId();
