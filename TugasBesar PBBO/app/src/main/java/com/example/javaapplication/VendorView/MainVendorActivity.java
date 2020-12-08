@@ -6,9 +6,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.example.javaapplication.DBController.DBHelperOrder;
 import com.example.javaapplication.DBController.DBHelperVendor;
+import com.example.javaapplication.HomeActivity;
+import com.example.javaapplication.MainActivity;
 import com.example.javaapplication.Model.Customer.Order;
 import com.example.javaapplication.Model.Vendor.Kaos;
 import com.example.javaapplication.OrderAdapter;
@@ -25,6 +29,8 @@ public class MainVendorActivity extends AppCompatActivity {
     private RecyclerView viewOrder;
     private OrderAdapterVendor orderAdapterVendor;
     private RecyclerView.LayoutManager orderManager;
+
+    private ImageButton btnLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,11 +54,24 @@ public class MainVendorActivity extends AppCompatActivity {
                 }
             });
         }
+
+        btnLogout = (ImageButton) findViewById(R.id.btn_logout);
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToHome();
+            }
+        });
     }
 
     public void goToChangeOrder(Order order) {
         Intent intent = new Intent(this, ChangeOrderActivity.class);
         intent.putExtra("ID_ORDER", order.getIdOrder());
+        startActivity(intent);
+    }
+
+    public void goToHome() {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }

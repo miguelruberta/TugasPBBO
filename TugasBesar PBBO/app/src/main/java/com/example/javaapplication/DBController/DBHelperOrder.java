@@ -133,5 +133,26 @@ public class DBHelperOrder extends SQLiteOpenHelper {
         //Kaos kaos = new Kaos();
         //Order order = new Order()
     }
+
+    public boolean updateUser (int idOrder, String status){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("idOrder", idOrder);
+        contentValues.put("status", status);
+        Cursor cursor = db.rawQuery("SELECT * FROM pesanan WHERE idOrder = "+ idOrder, null);
+
+        if(cursor.getCount() > 0){
+            long result = db.update("user", contentValues, "idOrder=" + idOrder, null);
+            if(result == -1){
+                return false;
+            }else{
+                return true;
+            }
+        } else {
+            return false;
+        }
+
+
+    }
 }
 

@@ -113,7 +113,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
                 if (isEmpty == false) {
                     boolean cekUpdate = dbH.updateUser(pass,StringEmail,noHP);
-                    if (cekUpdate == true) {
+                    if (cekUpdate) {
                         int id = dbH.getUserId(mail);
                         System.out.println("id = " + id);
                         Toast.makeText(EditProfileActivity.this, "Insert data berhasil", Toast.LENGTH_SHORT).show();

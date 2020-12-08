@@ -3,6 +3,7 @@ package com.example.javaapplication.VendorView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -10,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.javaapplication.DBController.DBHelperVendor;
 import com.example.javaapplication.Model.Customer.Order;
@@ -73,13 +75,27 @@ public class ChangeOrderActivity extends AppCompatActivity implements AdapterVie
         spinnerStatus.setOnItemSelectedListener(this);
 
         btnUbah = (ImageButton) findViewById(R.id.simpanOrder);
+        btnUbah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean update = db.editOrder(idOrder, spinnerStatus.getSelectedItem().toString());
+                if (update) {
+                    Toast.makeText(ChangeOrderActivity.this, "Update Order Berhasil", Toast.LENGTH_SHORT).show();
+                    goToBerandaVendor();
+                } else {
+                    Toast.makeText(ChangeOrderActivity.this, "Update order gagal", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
         //get order detail from id
         //show text to UI
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+        if (parent.getId() == R.id.spinner_status_order) {
+            String status = parent.getItemAtPosition(position).toString();
+        }
     }
 
     @Override
@@ -92,15 +108,8 @@ public class ChangeOrderActivity extends AppCompatActivity implements AdapterVie
 
     }
 
-    public void goToBerandaVendor(Vendor v) {
-
-    }
-
-    public void goToProfileVendor(Vendor v) {
-
-    }
-
-    public void goToOrdersVendor(Vendor v) {
-
+    public void goToBerandaVendor() {
+        Intent intent = new Intent (this, MainVendorActivity.class);
+        startActivity(intent);
     }
 }

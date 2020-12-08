@@ -122,8 +122,6 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("nohp", nohp);
         Cursor cursor = db.rawQuery("SELECT * FROM user WHERE email = ?", new String[]{email});
 
-
-
         if(cursor.getCount() > 0){
             long result = db.update("user", contentValues, "email=?", new String[]{email});
             if(result == -1){
@@ -134,8 +132,6 @@ public class DBHelper extends SQLiteOpenHelper {
         } else {
             return false;
         }
-
-
     }
 
     public boolean deleteUser (String name){

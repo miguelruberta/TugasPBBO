@@ -140,7 +140,7 @@ public class CreateOrderActivity extends AppCompatActivity implements AdapterVie
                 XL = Integer.parseInt(inputXL.getText().toString());
                 totalOrder = S + M + L + XL;
 
-                if (totalOrder > 12) {
+                if (totalOrder >= 12) {
                     if (stringKain == "Cotton Combed 30s Premium") {
                         totalPrice += totalOrder * 45000;
                     } else if (stringKain == "Cotton Combed 30s") {
